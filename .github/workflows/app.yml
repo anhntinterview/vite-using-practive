@@ -60,6 +60,10 @@ jobs:
       - name: Log in to DockerHub
         run: echo ${{ secrets.DOCKERHUB_PASSWORD }} | docker login -u ${{ secrets.DOCKERHUB_USERNAME }}  --password-stdin
       
+      # BUILD PROJECT TO EXPORT DIST FOLDER
+      - name: Build project
+        run: npm run build
+
       # https://github.com/docker/build-push-action
       - name: Cache Build and Push to DockerHub
         uses: docker/build-push-action@v4
