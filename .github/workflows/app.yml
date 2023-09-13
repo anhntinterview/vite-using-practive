@@ -87,7 +87,7 @@ jobs:
         with:
           host: ${{ secrets.INTERVIEW_HOST }}
           username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.SSHKEY }}
+          key: ${{ secrets.INTERVIEW_SSHKEY }}
           passphrase: ""
           envs: IMAGE_NAME,CONTAINER_NAME,{{ secrets.DOCKERHUB_USERNAME }},{{ secrets.DOCKERHUB_PASSWORD }}, ${{ secrets.DOCKERHUB_TAG }}
           script: |
